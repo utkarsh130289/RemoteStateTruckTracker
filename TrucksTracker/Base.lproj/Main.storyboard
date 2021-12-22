@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ClV-Me-5oe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trucks List View Controller-->
+        <scene sceneID="1dQ-K9-mDY">
+            <objects>
+                <tableViewController storyboardIdentifier="listViewController" id="yYc-90-nKZ" customClass="TrucksListViewController" customModule="TrucksTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="So3-vS-3fg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="truckCell" rowHeight="60" id="nMc-3J-FtX" customClass="TrucksListTableViewCell" customModule="TrucksTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nMc-3J-FtX" id="7DX-df-2NK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kz9-2G-EIY">
+                                            <rect key="frame" x="5" y="5" width="404" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyw-9U-lhD" userLabel="TruckNumberLbl">
+                                                    <rect key="frame" x="10" y="5" width="41.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vym-AF-v4d" userLabel="TruckStatusLbl">
+                                                    <rect key="frame" x="10" y="28" width="35.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dD-wh-Oaf" userLabel="TruckSinceTimeLbl">
+                                                    <rect key="frame" x="358.5" y="7" width="35.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBr-H8-1S0" userLabel="TruckSpeedLbl">
+                                                    <rect key="frame" x="358.5" y="28" width="35.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="LBr-H8-1S0" secondAttribute="bottom" constant="5" id="2B6-eh-c8P"/>
+                                                <constraint firstAttribute="trailing" secondItem="9dD-wh-Oaf" secondAttribute="trailing" constant="10" id="IbZ-ru-lhl"/>
+                                                <constraint firstItem="9dD-wh-Oaf" firstAttribute="centerY" secondItem="zyw-9U-lhD" secondAttribute="centerY" id="MT0-YB-Db7"/>
+                                                <constraint firstAttribute="trailing" secondItem="LBr-H8-1S0" secondAttribute="trailing" constant="10" id="O7a-tt-wvF"/>
+                                                <constraint firstItem="vym-AF-v4d" firstAttribute="leading" secondItem="kz9-2G-EIY" secondAttribute="leading" constant="10" id="UP6-wQ-bWB"/>
+                                                <constraint firstAttribute="bottom" secondItem="vym-AF-v4d" secondAttribute="bottom" constant="5" id="V0b-Re-nwr"/>
+                                                <constraint firstItem="zyw-9U-lhD" firstAttribute="leading" secondItem="kz9-2G-EIY" secondAttribute="leading" constant="10" id="aHG-Se-2fl"/>
+                                                <constraint firstItem="zyw-9U-lhD" firstAttribute="top" secondItem="kz9-2G-EIY" secondAttribute="top" constant="5" id="ae6-bE-O6k"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="kz9-2G-EIY" secondAttribute="bottom" constant="5" id="5bE-mE-dSQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="kz9-2G-EIY" secondAttribute="trailing" constant="5" id="A44-yK-xLT"/>
+                                        <constraint firstItem="kz9-2G-EIY" firstAttribute="top" secondItem="7DX-df-2NK" secondAttribute="top" constant="5" id="ax3-Ny-578"/>
+                                        <constraint firstItem="kz9-2G-EIY" firstAttribute="centerY" secondItem="7DX-df-2NK" secondAttribute="centerY" id="bda-nm-1pW"/>
+                                        <constraint firstItem="kz9-2G-EIY" firstAttribute="centerX" secondItem="7DX-df-2NK" secondAttribute="centerX" id="xj6-MW-IwI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="TruckLastUpdatedLbl" destination="9dD-wh-Oaf" id="MrH-er-vzu"/>
+                                    <outlet property="TruckNumberLbl" destination="zyw-9U-lhD" id="CA9-Tt-KYM"/>
+                                    <outlet property="TruckRunStopStateLbl" destination="vym-AF-v4d" id="ggD-ic-MW5"/>
+                                    <outlet property="TruckSpeedLbl" destination="LBr-H8-1S0" id="Vhk-Nb-2qf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yYc-90-nKZ" id="gIR-kA-X93"/>
+                            <outlet property="delegate" destination="yYc-90-nKZ" id="7Mz-bs-jNy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5j-29-IQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-683" y="888"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eAK-oC-0zE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ClV-Me-5oe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="57a-WC-qZO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.812579155" green="0.2333393097" blue="0.2119720578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cno-ao-ewT" kind="relationship" relationship="rootViewController" id="lFl-oO-jUf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcN-Ze-Tzb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="78.348214285714278"/>
+        </scene>
+        <!--Trucks Map View Controller-->
+        <scene sceneID="zVM-4d-qa3">
+            <objects>
+                <viewController storyboardIdentifier="mapViewController" id="9ie-sI-vt6" customClass="TrucksMapViewController" customModule="TrucksTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B3Q-9y-JcC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HmC-dU-BBx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9ie-sI-vt6" id="j9C-wh-S5N"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0wc-On-hli"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HmC-dU-BBx" firstAttribute="leading" secondItem="0wc-On-hli" secondAttribute="leading" id="fAL-B1-gPW"/>
+                            <constraint firstItem="HmC-dU-BBx" firstAttribute="top" secondItem="0wc-On-hli" secondAttribute="top" id="rom-Nu-VtC"/>
+                            <constraint firstItem="0wc-On-hli" firstAttribute="trailing" secondItem="HmC-dU-BBx" secondAttribute="trailing" id="wSC-vi-GnT"/>
+                            <constraint firstItem="0wc-On-hli" firstAttribute="bottom" secondItem="HmC-dU-BBx" secondAttribute="bottom" id="xRn-xF-8Mb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="HmC-dU-BBx" id="DyC-iu-fij"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qr8-pz-8Gq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724.63768115942037" y="859.82142857142856"/>
+        </scene>
+        <!--Landing View Controller-->
+        <scene sceneID="dHB-bT-VIv">
+            <objects>
+                <viewController id="cno-ao-ewT" customClass="LandingViewController" customModule="TrucksTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gbX-7U-nLR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PN2-JK-JtI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="yYc-90-nKZ" kind="embed" identifier="toListVC" id="eE5-sb-RE9"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0b-tO-ap6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3kl-lV-aat"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s0b-tO-ap6" firstAttribute="top" secondItem="3kl-lV-aat" secondAttribute="top" id="5dO-kl-IYY"/>
+                            <constraint firstItem="s0b-tO-ap6" firstAttribute="leading" secondItem="3kl-lV-aat" secondAttribute="leading" id="9Hh-5o-jv2"/>
+                            <constraint firstItem="3kl-lV-aat" firstAttribute="trailing" secondItem="s0b-tO-ap6" secondAttribute="trailing" id="RZN-tG-ZVC"/>
+                            <constraint firstItem="PN2-JK-JtI" firstAttribute="leading" secondItem="3kl-lV-aat" secondAttribute="leading" id="ntA-fm-wi9"/>
+                            <constraint firstItem="3kl-lV-aat" firstAttribute="bottom" secondItem="s0b-tO-ap6" secondAttribute="bottom" id="oeC-hy-vV8"/>
+                            <constraint firstItem="3kl-lV-aat" firstAttribute="trailing" secondItem="PN2-JK-JtI" secondAttribute="trailing" id="pKh-l6-ARX"/>
+                            <constraint firstItem="3kl-lV-aat" firstAttribute="bottom" secondItem="PN2-JK-JtI" secondAttribute="bottom" id="tK5-ix-7D8"/>
+                            <constraint firstItem="PN2-JK-JtI" firstAttribute="top" secondItem="3kl-lV-aat" secondAttribute="top" id="tww-FM-uPN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fYy-MU-4kc"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="listContainerView" destination="PN2-JK-JtI" id="3Ng-Ht-TyS"/>
+                        <outlet property="mapContainerView" destination="s0b-tO-ap6" id="eCV-VM-eLx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sL4-gF-N9U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
